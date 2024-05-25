@@ -40,7 +40,8 @@ body {
     cursor: pointer;
 }
 
-.coin-image:active {
+.coin-image:active,
+.coin-image:focus {
     opacity: 0.8;
     transform: scale(1.02);
 }
