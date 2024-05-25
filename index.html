@@ -33,5 +33,27 @@
         </div>
     </section>
     <script src="index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var coinImage = document.querySelector('.coin-image');
+
+            function addActiveClass() {
+                coinImage.classList.add('coin-image-active');
+            }
+
+            function removeActiveClass() {
+                coinImage.classList.remove('coin-image-active');
+            }
+
+            // Add touch and mouse event listeners
+            coinImage.addEventListener('touchstart', addActiveClass);
+            coinImage.addEventListener('touchend', removeActiveClass);
+            coinImage.addEventListener('touchcancel', removeActiveClass); // Handle touch cancel
+
+            coinImage.addEventListener('mousedown', addActiveClass);
+            coinImage.addEventListener('mouseup', removeActiveClass);
+            coinImage.addEventListener('mouseleave', removeActiveClass); // Handle mouse leave
+        });
+    </script>
 </body>
 </html>
