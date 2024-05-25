@@ -8,6 +8,7 @@ body {
     color: white;
     user-select: none;
     touch-action: none;
+    overflow-y: none;
 }
 
 
